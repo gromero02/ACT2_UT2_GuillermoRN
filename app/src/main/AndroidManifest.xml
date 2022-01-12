@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ACT2_UT2_GuillermoRN">
         <activity
+            android:name=".ActListarTodos"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">ACT2_UT2_GuillermoRN</string>
+    <string name="txtvtitulo">FRUITIS</string>
+    <string name="itemInicio">Inicio</string>
+    <string name="itemCargarTodos">Cargar todo</string>
+    <string name="itemEliminar">Eliminar fruiti</string>
+    <string name="txtvañadirfruiti">AÑADIR FRUITI</string>
+    <string name="btAñadir">AÑADIR FRUTI</string>
+    <string name="txtvgestionarfruitis">GESTIONAR FRUITIS</string>
+    <string name="btcargartodos">TODOS LOS FRUITIS</string>
+    <string name="btcargarultimo">ÚLTIMO FRUITI</string>
+    <string name="btfiltronombre">FILTRAR POR NOMBRE</string>
 </resources>

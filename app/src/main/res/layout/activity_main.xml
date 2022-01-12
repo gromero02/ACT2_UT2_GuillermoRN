@@ -1,18 +1,241 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#718E50"
+    android:backgroundTint="#C1EFA4"
+    android:foregroundGravity="center"
+    android:orientation="vertical"
+    android:textAlignment="center"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <View
+        android:id="@+id/dv"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="#000000"
+        android:drawingCacheQuality="auto"
+        android:foregroundTint="#000000" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/txtvTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/txtvtitulo"
+        android:textAlignment="center"
+        android:textColor="#161F4E"
+        android:textSize="48sp" />
+
+    <View
+        android:id="@+id/dv1"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="#000000"
+        android:drawingCacheQuality="auto"
+        android:foregroundTint="#000000" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="17dp"
+        android:background="#B53D3D"
+        android:backgroundTint="#E4C0C0" />
+
+    <View
+        android:id="@+id/dv3"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="#000000"
+        android:drawingCacheQuality="auto"
+        android:foregroundTint="#000000" />
+
+    <TextView
+        android:id="@+id/txtvAñadirFruitis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/txtvañadirfruiti"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edtxtNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="#000000"
+        android:backgroundTintMode="src_in"
+        android:ems="10"
+        android:hint="nombre ...."
+        android:inputType="textPersonName"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edtxtPeso"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="#000000"
+            android:backgroundTintMode="src_in"
+            android:ems="10"
+            android:hint="peso ...."
+            android:inputType="textPersonName"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:minHeight="48dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <CheckBox
+            android:id="@+id/chbPodrida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="Podrida"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="18dp" />
+
+    <Button
+        android:id="@+id/btAñadir"
+        android:layout_width="200sp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:backgroundTint="#7E8154"
+        android:foregroundGravity="center"
+        android:text="@string/btAñadir"
+        android:onClick="añadir"/>
+
+    <View
+        android:id="@+id/dv2"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="#000000"
+        android:drawingCacheQuality="auto"
+        android:foregroundTint="#000000" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="17dp" />
+
+    <View
+        android:id="@+id/dv4"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="#000000"
+        android:drawingCacheQuality="auto"
+        android:foregroundTint="#000000" />
+
+    <TextView
+        android:id="@+id/txtvGestionarFruitis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/txtvgestionarfruitis"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btCargarTodos"
+            android:layout_width="158dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0"
+            android:backgroundTint="#91A54D"
+            android:text="@string/btcargartodos" />
+
+        <Button
+            android:id="@+id/btCargarUltimo"
+            android:layout_width="189dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0"
+            android:backgroundTint="#72813F"
+            android:text="@string/btcargarultimo" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btFiltroNombre"
+            android:layout_width="158dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="0"
+            android:backgroundTint="#87C161"
+            android:text="@string/btfiltronombre" />
+
+        <EditText
+            android:id="@+id/edtxtNombreFiltro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="0"
+            android:ems="10"
+            android:hint="Nombre para filtrar..."
+            android:inputType="textPersonName"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/dv5"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="#000000"
+        android:drawingCacheQuality="auto"
+        android:foregroundTint="#000000" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="156dp"
+        android:layout_gravity="center_vertical"
+        app:srcCompat="@drawable/footer" />
+
+</LinearLayout>
