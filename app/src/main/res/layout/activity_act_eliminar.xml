@@ -9,7 +9,7 @@
     android:foregroundGravity="center"
     android:orientation="vertical"
     android:textAlignment="center"
-    tools:context=".ActListarTodos">
+    tools:context=".ActEliminar">
 
     <View
         android:id="@+id/dv6"
@@ -21,11 +21,11 @@
         android:foregroundTint="#000000" />
 
     <TextView
-        android:id="@+id/txtvTituloMTodos"
+        android:id="@+id/txtvEliminar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:text="@string/txtmostrartodos"
+        android:text="@string/txtveliminar"
         android:textAlignment="center"
         android:textColor="#161F4E"
         android:textSize="48sp"
@@ -55,25 +55,27 @@
         android:drawingCacheQuality="auto"
         android:foregroundTint="#000000" />
 
-    <TextView
-        android:id="@+id/txtvFruitis"
+    <EditText
+        android:id="@+id/etxtNombreE"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="5dp"
-        android:gravity="center"
-        android:text="@string/txtvFruitis"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:layout_margin="15dp"
+        android:ems="10"
+        android:hint="Nombre a eliminar ..."
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textSize="20sp" />
 
-    <ListView
-        android:id="@+id/lvFruitis"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginBottom="5dp" />
+    <Button
+        android:id="@+id/btEliminar"
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="15dp"
+        android:backgroundTint="#679169"
+        android:gravity="center"
+        android:text="@string/btEliminar"
+        android:onClick="btelim"/>
 
     <View
         android:id="@+id/dv9"
@@ -83,4 +85,5 @@
         android:backgroundTint="#000000"
         android:drawingCacheQuality="auto"
         android:foregroundTint="#000000" />
+
 </LinearLayout>

@@ -10,4 +10,12 @@
     <string name="btcargartodos">TODOS LOS FRUITIS</string>
     <string name="btcargarultimo">ÚLTIMO FRUITI</string>
     <string name="btfiltronombre">FILTRAR POR NOMBRE</string>
+    <string name="txtvtitulomostod">MOSTRAR TODOS LOS FRUITIS</string>
+    <string name="txtvFruitis">FRUITIS</string>
+    <string name="txtmostrartodos">MOSTRAR TODOS</string>
+    <string name="txtvmostrarultimoañadido">MOSTRAR ÚLTIMO</string>
+    <string name="txtveliminar">ELIMINAR</string>
+    <string name="txtvmostrarpnombre">FILTRAR POR NOMBRE</string>
+    <string name="btMostrarUltimo">MOSTRAR</string>
+    <string name="btEliminar">ELIMINAR</string>
 </resources>

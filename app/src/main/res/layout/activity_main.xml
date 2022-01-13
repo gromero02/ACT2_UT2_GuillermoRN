@@ -21,14 +21,14 @@
         android:foregroundTint="#000000" />
 
     <TextView
-        android:id="@+id/txtvTitulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:text="@string/txtvtitulo"
         android:textAlignment="center"
         android:textColor="#161F4E"
-        android:textSize="48sp" />
+        android:textSize="48sp"
+        android:textStyle="bold" />
 
     <View
         android:id="@+id/dv1"
@@ -177,7 +177,8 @@
             android:layout_marginRight="10dp"
             android:layout_weight="0"
             android:backgroundTint="#91A54D"
-            android:text="@string/btcargartodos" />
+            android:text="@string/btcargartodos"
+            android:onClick="actmtd"/>
 
         <Button
             android:id="@+id/btCargarUltimo"
@@ -188,7 +189,8 @@
             android:layout_marginRight="10dp"
             android:layout_weight="0"
             android:backgroundTint="#72813F"
-            android:text="@string/btcargarultimo" />
+            android:text="@string/btcargarultimo"
+            android:onClick="actmul"/>
 
     </LinearLayout>
 
@@ -206,7 +208,8 @@
             android:layout_marginRight="3dp"
             android:layout_weight="0"
             android:backgroundTint="#87C161"
-            android:text="@string/btfiltronombre" />
+            android:text="@string/btfiltronombre"
+            android:onClick="actlpnomb"/>
 
         <EditText
             android:id="@+id/edtxtNombreFiltro"
@@ -219,7 +222,8 @@
             android:ems="10"
             android:hint="Nombre para filtrar..."
             android:inputType="textPersonName"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:visibility="invisible" />
     </LinearLayout>
 
     <View
@@ -234,7 +238,7 @@
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
-        android:layout_height="156dp"
+        android:layout_height="199dp"
         android:layout_gravity="center_vertical"
         app:srcCompat="@drawable/footer" />
 

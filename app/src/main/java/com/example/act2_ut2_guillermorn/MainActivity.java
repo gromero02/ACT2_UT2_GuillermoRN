@@ -3,16 +3,20 @@ package com.example.act2_ut2_guillermorn;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     HelperSQLApp helper;
     SQLiteDatabase db;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,10 +100,56 @@ public class MainActivity extends AppCompatActivity {
             values.put("podrida", podrida);
             db.insert("fruitis",null, values);
 
+
         //Borrar valores
             edtxtNombre.setText("");
             edtxtPeso.setText("");
             chbPodrida.setChecked(false);
             nombre ="";peso=0; sabor=""; podrida=false;
+    }
+
+    public void actmtd(MenuItem item) {
+        Intent i = new Intent(getApplicationContext(),ActListarTodos.class);
+        startActivity(i);
+    }
+
+    public void actmtd(View view) {
+        Intent i = new Intent(getApplicationContext(),ActListarTodos.class);
+        startActivity(i);
+    }
+
+    public void actmul(View view) {
+        Intent i = new Intent(getApplicationContext(),ActListarUltimo.class);
+        startActivity(i);
+    }
+
+    public void acte(MenuItem item) {
+        Intent i = new Intent(getApplicationContext(),ActEliminar.class);
+        startActivity(i);
+    }
+
+    public void actin(MenuItem item) {
+        Intent i = new Intent(getApplicationContext(),MainActivity.class);
+        startActivity(i);
+    }
+
+    public void actlpnomb(View view) {
+
+        String nombreUsu;
+        EditText edtxtFPN = findViewById(R.id.edtxtNombreFiltro);
+
+        edtxtFPN.setVisibility(View.VISIBLE);
+            //Si el campo tiene texto, al pulsar el boton nos redirigirá a la página de los resultados
+            if(!edtxtFPN.getText().toString().equals("")){
+                Intent i = new Intent(getApplicationContext(),ActListarPorNombre.class);
+                
+                //Recuperar nombre escrito por el usuario
+
+                nombreUsu = edtxtFPN.getText().toString();
+
+                        i.putExtra("nUsu",nombreUsu);
+                startActivity(i);
+            }
+
     }
 }

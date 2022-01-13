@@ -5,13 +5,20 @@
     <item
         android:id="@+id/it1"
         android:checkable="false"
-        android:title="@string/itemInicio" />
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:title="@string/itemInicio"
+        app:showAsAction="always"
+        android:onClick="actin"/>
     <item
         android:id="@+id/it2"
+        android:icon="@android:drawable/ic_dialog_dialer"
         android:title="@string/itemCargarTodos"
-        app:showAsAction="never" />
+        app:showAsAction="always|never"
+        android:onClick="actmtd"/>
     <item
         android:id="@+id/it3"
+        android:icon="@android:drawable/ic_delete"
         android:title="@string/itemEliminar"
-        app:showAsAction="never" />
+        app:showAsAction="always|never"
+        android:onClick="acte"/>
 </menu>

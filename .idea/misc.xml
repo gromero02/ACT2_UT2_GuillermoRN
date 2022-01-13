@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Guillermo/AndroidStudioProjects/ACT2_UT2_GuillermoRN/app/src/main/res/layout/activity_act_eliminar.xml" value="0.35858585858585856" />
+        <entry key="..\:/Users/Guillermo/AndroidStudioProjects/ACT2_UT2_GuillermoRN/app/src/main/res/layout/activity_act_listar_por_nombre.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Guillermo/AndroidStudioProjects/ACT2_UT2_GuillermoRN/app/src/main/res/layout/activity_act_listar_todos.xml" value="0.4" />
+        <entry key="..\:/Users/Guillermo/AndroidStudioProjects/ACT2_UT2_GuillermoRN/app/src/main/res/layout/activity_act_listar_ultimo.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Guillermo/AndroidStudioProjects/ACT2_UT2_GuillermoRN/app/src/main/res/layout/activity_main.xml" value="0.4" />
-        <entry key="..\:/Users/Guillermo/AndroidStudioProjects/ACT2_UT2_GuillermoRN/app/src/main/res/menu/menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Guillermo/AndroidStudioProjects/ACT2_UT2_GuillermoRN/app/src/main/res/menu/menu.xml" value="0.4" />
       </map>
     </option>
   </component>

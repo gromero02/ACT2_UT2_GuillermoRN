@@ -9,7 +9,7 @@
     android:foregroundGravity="center"
     android:orientation="vertical"
     android:textAlignment="center"
-    tools:context=".ActListarTodos">
+    tools:context=".ActListarPorNombre">
 
     <View
         android:id="@+id/dv6"
@@ -20,12 +20,13 @@
         android:drawingCacheQuality="auto"
         android:foregroundTint="#000000" />
 
+
     <TextView
-        android:id="@+id/txtvTituloMTodos"
+        android:id="@+id/textvMPnombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:text="@string/txtmostrartodos"
+        android:text="@string/txtvmostrarpnombre"
         android:textAlignment="center"
         android:textColor="#161F4E"
         android:textSize="48sp"
@@ -56,24 +57,13 @@
         android:foregroundTint="#000000" />
 
     <TextView
-        android:id="@+id/txtvFruitis"
+        android:id="@+id/txtvRsSelectNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="5dp"
-        android:gravity="center"
-        android:text="@string/txtvFruitis"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-
-    <ListView
-        android:id="@+id/lvFruitis"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="25dp"
+        android:layout_marginLeft="15dp"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginBottom="5dp" />
+        android:layout_marginRight="15dp"
+        android:textSize="20sp"  />
 
     <View
         android:id="@+id/dv9"
@@ -83,4 +73,5 @@
         android:backgroundTint="#000000"
         android:drawingCacheQuality="auto"
         android:foregroundTint="#000000" />
+
 </LinearLayout>

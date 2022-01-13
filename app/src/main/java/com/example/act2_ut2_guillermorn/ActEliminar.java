@@ -3,47 +3,26 @@ package com.example.act2_ut2_guillermorn;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
 
-import java.util.ArrayList;
-
-public class ActListarTodos extends AppCompatActivity {
-
-    ListView lv1;
+public class ActEliminar extends AppCompatActivity {
     HelperSQLApp helper;
     SQLiteDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_act_listar_todos);
-
-        lv1 = (ListView)findViewById(R.id.lvFruitis);
-
-        ArrayList<String> arr = new ArrayList<>();
+        setContentView(R.layout.activity_act_eliminar);
 
         helper= new HelperSQLApp(this);
-        db=helper.getReadableDatabase();
-
-        Cursor fila = db.rawQuery("select * from fruitis", null);
-
-        if(fila.moveToFirst()){
-            do{
-                arr.add(fila.getString(0) + " --->  " + fila.getString(1)+ " -- " + fila.getString(2)+ " -- " + fila.getString(3)+ " -- " + fila.getString(4));
-
-            }while(fila.moveToNext());
-        }
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, arr);
-        lv1.setAdapter(adapter);
-
+        db=helper.getWritableDatabase();
     }
 
     //MENU
@@ -67,5 +46,27 @@ public class ActListarTodos extends AppCompatActivity {
     public void actin(MenuItem item) {
         Intent i = new Intent(getApplicationContext(),MainActivity.class);
         startActivity(i);
+    }
+
+    public void btelim(View view) {
+        //Variables
+            String whereC, nombreUsu, mensaje;
+
+        //Recuperar nombre
+        EditText edtxtUsu = findViewById(R.id.etxtNombreE);
+            nombreUsu = edtxtUsu.getText().toString();
+
+        whereC = "nombre='"+nombreUsu+"'";
+
+            db.delete("fruitis",whereC ,null ) ;
+
+        //Toast
+        mensaje = nombreUsu+" "+"se ha eliminado";
+
+        Toast toast1 = Toast.makeText(getApplicationContext(),mensaje, Toast.LENGTH_SHORT);
+        toast1.show();
+
+        //Restablecer campo
+            edtxtUsu.setText("");
     }
 }
