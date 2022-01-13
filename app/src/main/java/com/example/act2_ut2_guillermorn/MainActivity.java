@@ -1,12 +1,15 @@
 package com.example.act2_ut2_guillermorn;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -23,11 +26,12 @@ public class MainActivity extends AppCompatActivity {
    //VARIABLES
         String sabor;
         String nombre;
-        Integer peso;
+        int peso;
         Boolean podrida;
 
-    HelperSQLApp helper;
-    SQLiteDatabase db;
+   //BD
+        HelperSQLApp helper;
+        SQLiteDatabase db;
 
 
     @Override
@@ -35,12 +39,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //AÑADIR SPINNER A LA APP
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
-
         String[] valores = {"dulce","salado", "amargo"};
-
-        spinner.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, valores));
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        //RECUPERAR VALORES
+        Spinner cboxSabores = (Spinner) findViewById(R.id.spinner);
+        cboxSabores.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, valores));
+        cboxSabores.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id)
@@ -72,12 +75,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void añadir(View view) {
-        //RECUPERAR VALORES
 
-        Spinner cboxSabores = (Spinner) findViewById(R.id.spinner);
+        //RECUPERAR VALORES
         EditText edtxtNombre = findViewById(R.id.edtxtNombre);
         EditText edtxtPeso = findViewById(R.id.edtxtPeso);
-        CheckBox chbPodrida = findViewById(R.id.chbPodrida) ;
+        CheckBox chbPodrida = findViewById(R.id.chbPodrida);
+        Spinner cboxSabores = (Spinner) findViewById(R.id.spinner);
 
         //NOMBRE
         nombre = edtxtNombre.getText().toString();
@@ -99,7 +102,6 @@ public class MainActivity extends AppCompatActivity {
             values.put("sabor", sabor);
             values.put("podrida", podrida);
             db.insert("fruitis",null, values);
-
 
         //Borrar valores
             edtxtNombre.setText("");
@@ -144,12 +146,9 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent(getApplicationContext(),ActListarPorNombre.class);
                 
                 //Recuperar nombre escrito por el usuario
-
                 nombreUsu = edtxtFPN.getText().toString();
-
                         i.putExtra("nUsu",nombreUsu);
                 startActivity(i);
             }
-
     }
 }
