@@ -85,7 +85,7 @@
 
         <EditText
             android:id="@+id/edtxtPeso"
-            android:layout_width="130dp"
+            android:layout_width="115dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
@@ -99,7 +99,7 @@
 
         <Spinner
             android:id="@+id/spinner"
-            android:layout_width="130dp"
+            android:layout_width="115dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:minHeight="48dp"
@@ -238,7 +238,7 @@
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
-        android:layout_height="199dp"
+        android:layout_height="243dp"
         android:layout_gravity="center_vertical"
         app:srcCompat="@drawable/footer" />
 
